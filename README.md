@@ -35,14 +35,37 @@ Kaggle Link: https://www.kaggle.com/datasets/shivamb/netflix-shows?resource=down
 - **Separated Movies and TV Shows** into two tables:
   - **Movies**: Contains duration in **minutes** (converted to TIME format).
   - **Shows**: Stores **seasons** instead of minutes.
+    
+### 4. Further Normalization to 3NF    
+#### 1. Genre Normalization
+- A separate `genre` table was created to store unique genres, with `genre_id` as the primary key.
+- Junction tables, `movie_genres` and `show_genres`, were created to establish many-to-many relationships between media and genres.
 
-### 4. Converting Data Types
+#### 2. Data Insertion & Transformation
+- Unique genres were extracted from the `listed_in` column of both `movies` and `shows` tables. These were inserted into the `genre` table after trimming unnecessary spaces.
+- The `movie_genres` and `show_genres` tables were populated by mapping `movie_id` and `show_id` to their corresponding `genre_id`.
+
+#### 3. Consolidated Media Table
+- A unified media view was generated, merging `movies` and `shows` while maintaining a common structure.
+- A query was designed to retrieve all media records, including relevant attributes but excluding duration for better alignment across both categories.
+
+#### 4. Country-Based Normalization
+- Countries were extracted as separate entities, and each media entry was assigned its corresponding country, facilitating location-based analysis.
+
+#### 5. Duration Standardization
+- The duration attribute was split into two separate fields:
+  - `duration_in_min` for movies
+  - `seasons` for shows
+---
+
+## Entity Relationship Diagram
+
+![ERD](https://github.com/user-attachments/assets/4b2503dd-297d-402e-aeb1-e07fee2439d9)
+
+### 5. Converting Data Types
 - **Converted `duration` in movies** from VARCHAR to **TIME format**.
 - **Converted `seasons` in shows** from text to **INTEGER**.
 - **Formatted `date_added` column** from text to **DATE format** to allow proper time-based analysis.
-
-### 5. Further Normalization Considerations
-- The `listed_in` column (genres) could be further normalized into a separate **genre table** for better categorization.
 
 ---
 ## Technology Stack  
