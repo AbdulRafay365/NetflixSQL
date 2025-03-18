@@ -20,7 +20,8 @@ SELECT
     COUNT(*) as Shows
 FROM netflix
 GROUP BY Types_of_rating
-ORDER BY Shows DESC;
+ORDER BY Shows DESC
+LIMIT 5;
 
 -- Step 2: Use Common Table Expressions (CTEs) to find the most frequent rating for movies and TV shows.
 WITH RatingCounts AS (
@@ -52,7 +53,8 @@ SELECT
     release_year
 FROM netflix
 WHERE 
-    type = 'Movie' AND release_year = '2020';
+    type = 'Movie' AND release_year = '2020'
+LIMIT 5;
 
 -- Q4 Find the top 5 countries with the most content on Netflix
 -- STRING_TO_ARRAY splits multiple countries listed in a single column
@@ -70,14 +72,13 @@ LIMIT 5;
 -- REPLACE removes 'min' from the duration column and converts it into an integer
 SELECT 
     title, 
-    REPLACE(duration, ' min', '')::INTEGER AS duration_numeric
+    REPLACE(duration, ' min', '')::INTEGER AS duration_numeric_min
 FROM netflix
 WHERE type = 'Movie'
-ORDER BY duration_numeric DESC
+ORDER BY duration_numeric_min DESC
 LIMIT 5;
 
 -- Q6 Content added in the last 5 years using UNION ALL
--- Run without WITH contentadded to see a table with all the content added in the last 5 years
 WITH contentadded AS (
     SELECT 
         title, 
@@ -95,7 +96,6 @@ WITH contentadded AS (
     FROM shows
     WHERE date_added BETWEEN '2016-01-01' AND '2021-12-31'
 )
--- Extension to see the total content by content type
 SELECT content_type, COUNT(*) AS total
 FROM contentadded
 GROUP BY content_type
@@ -117,7 +117,9 @@ WHERE
 -- Q8 List all TV shows with more than 5 seasons
 SELECT title, seasons
 FROM shows
-WHERE seasons >= 5;
+WHERE seasons >= 5
+ORDER BY seasons DESC
+LIMIT 5;
 
 -- Q9 Count the number of content items in each genre
 -- Uses UNNEST to split multiple genres stored in a single column
@@ -142,21 +144,22 @@ ORDER BY Average_content_released DESC
 LIMIT 5;
 
 -- Q11 List all movies of type documentaries
-SELECT show_id, title 
+SELECT movie_id, title 
 FROM movies
-WHERE listed_in ILIKE '%documentaries%';
+WHERE listed_in ILIKE '%documentaries%'
+LIMIT 5;
 
 -- Q12 Find all content without a director
 -- Uses UNION ALL to combine results from movies and shows
-SELECT show_id, title, type FROM movies
-WHERE director IS NULL
+SELECT movie_id, title, type FROM movies
+WHERE director = 'Unknown'
 UNION ALL
 SELECT show_id, title, type FROM shows
-WHERE director IS NULL
+WHERE director = 'Unknown'
 ORDER BY 3;
 
--- Q13 Count how many movies actor 'Salman Khan' appeared in over the last 10 years
-SELECT show_id, title, release_year, actor_name
+-- Q13 Count how many movies actor 'Salman Khan' appeared in over the last 10 years (Previous to 2021 as data is only upto 2021)
+SELECT movie_id, title, release_year, actor_name
 FROM movies,
      UNNEST(string_to_array(casts, ', ')) AS actor_name
 WHERE actor_name ILIKE '%Salman Khan%'
@@ -179,7 +182,7 @@ SELECT
         WHEN description ILIKE '%kill%' OR description ILIKE '%violence%' THEN 'Bad'
         ELSE 'Good'
     END AS score,
-    COUNT(show_id) AS total_content, type
+    COUNT(movie_id) AS total_content, type
 FROM movies
 GROUP BY score, type
 UNION ALL
