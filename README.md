@@ -203,7 +203,13 @@ Compare the distribution of Movies and TV Shows in the dataset.
 - **The U.S. leads content production**, but **India and the U.K. are key international markets**.  
 - **Dramas, international movies, and comedies are the most popular genres**, showcasing Netflix’s efforts to balance **entertainment, global storytelling, and factual content**.  
 - **Peak content additions in India were in 2017-2019**, reflecting Netflix’s strategy to grow in **regional markets**.  
-- The presence of Bollywood superstars suggests that **Netflix is strategically using established talent to capture the Indian audience**.  
+- The presence of Bollywood superstars suggests that **Netflix is strategically using established talent to capture the Indian audience**.
+
+---
+
+## Additional Consideration
+- Further data collection required as there are almost 2600 movies and tv shows missing director information which may hinder the accuracy of our analysis.
+- Data is only upto 2021 and the analysis may not correspond to current trends. 
 
 
 
