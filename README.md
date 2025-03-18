@@ -268,5 +268,10 @@ Compare the distribution of Movies and TV Shows in the dataset.
 - Further data collection is required, as nearly 2,600 movies and TV shows are missing director information, which may hinder the accuracy of our analysis.
 - The data is only available up to 2021, so the analysis may not reflect current trends.
 
+---
+
+## What's Next
+An interactive dashboard in Tableau to support this analysis will be uploaded shortly.
+
 
 
