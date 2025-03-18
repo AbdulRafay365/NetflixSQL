@@ -60,7 +60,7 @@ Kaggle Link: https://www.kaggle.com/datasets/shivamb/netflix-shows?resource=down
 
 ## Entity Relationship Diagram
 
-![ERD](https://github.com/user-attachments/assets/4b2503dd-297d-402e-aeb1-e07fee2439d9)
+![ERD_cropped](https://github.com/user-attachments/assets/84c258b5-812b-448f-898b-8950c5b15624)
 
 ### 5. Converting Data Types
 - **Converted `duration` in movies** from VARCHAR to **TIME format**.
