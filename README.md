@@ -44,6 +44,23 @@ Kaggle Link: https://www.kaggle.com/datasets/shivamb/netflix-shows?resource=down
 ### 5. Further Normalization Considerations
 - The `listed_in` column (genres) could be further normalized into a separate **genre table** for better categorization.
 
+---
+## Technology Stack  
+
+- **Database:** PostgreSQL  
+- **Query Tool:** pgAdmin  
+- **Version Control:** Git & GitHub  
+- **Data Handling:** SQL Queries  
+
+## Operations Used  
+
+- **Data Cleaning & Formatting:** Converting text to lists, trimming spaces, changing data types.  
+- **Data Analysis:** Counting, grouping, filtering, and ranking content.  
+- **Performance Optimization:** Using CTEs (`WITH` statements) for better query readability and efficiency.  
+- **Combining Data:** Merging results from different tables using `UNION ALL`.
+
+---
+
 ## 15 Business Problems & Solutions
 
 ---
