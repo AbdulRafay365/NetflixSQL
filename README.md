@@ -70,65 +70,99 @@ Kaggle Link: https://www.kaggle.com/datasets/shivamb/netflix-shows?resource=down
 1.	What types of content are available?
 Identify all unique types of content available on Netflix.
 
-3.	Count the number of Movies vs TV Shows.
+<img width="201" alt="0" src="https://github.com/user-attachments/assets/b7123f16-85b3-416d-a3be-85209fbb2653" />
+
+2.	Count the number of Movies vs TV Shows.
 Compare the distribution of Movies and TV Shows in the dataset.
+
+<img width="296" alt="1" src="https://github.com/user-attachments/assets/dce0e17f-14d5-4127-9c08-bcedefb7039f" />
+
 
 ---
 
 ## Content Details & Trends
 ### 3. Find the most common rating for Movies and TV Shows.
 - Determine the rating that appears most frequently for each content type.
+  
+<img width="261" alt="2" src="https://github.com/user-attachments/assets/4d3a8798-b170-4b35-81e7-227ff4a17df2" />
+<img width="354" alt="2 ex" src="https://github.com/user-attachments/assets/7a231352-52fe-4631-947b-9d67d57b3825" />
 
 ### 4. List all movies released in a specific year (e.g., 2020).
 - Retrieve a list of movies based on the year they were released.
+  
+<img width="613" alt="3" src="https://github.com/user-attachments/assets/ffa125b3-7721-485f-86c2-660c9d13f4c8" />
 
 ### 5. Find the top 5 countries with the most content on Netflix.
 - Identify which countries contribute the most content to Netflix.
+  
+<img width="264" alt="4" src="https://github.com/user-attachments/assets/27cb3274-6f42-4612-9b9f-b1c76723f5cd" />
 
 ### 6. Identify the longest movie.
 - Locate the movie with the longest runtime on Netflix.
+  
+<img width="386" alt="5" src="https://github.com/user-attachments/assets/f4d51e41-9b77-4f51-a1c2-0ca548e36cb4" />
 
 ### 7. Find content added in the last 5 years.
 - Query to discover content added to Netflix within the most recent 5 years.
+  
+<img width="650" alt="6" src="https://github.com/user-attachments/assets/b0c5d44a-e270-4b94-85f6-77f55bfcb0db" />
 
 ---
 
 ## Creator & Genre Insights
 ### 8. Find all Movies/TV Shows by director ‘Rajiv Chilaka’.
 - Retrieve all content directed by Rajiv Chilaka.
+  
+<img width="1197" alt="7" src="https://github.com/user-attachments/assets/0b8ff70f-6608-4c8b-be5e-0d64d3751f28" />
 
 ### 9. List all TV Shows with more than 5 seasons.
 - Identify TV Shows that have a runtime exceeding five seasons.
+  
+<img width="275" alt="8" src="https://github.com/user-attachments/assets/643a76a8-03bd-4eea-89c5-3aed9f6b5e04" />
 
 ### 10. Count the number of content items in each genre.
 - Group content by genre and calculate the total for each.
+  
+<img width="304" alt="9" src="https://github.com/user-attachments/assets/cbfe962a-4cad-4301-ae4a-7e123713830a" />
 
 ---
 
 ## Country-Specific Content Analysis
 ### 11. Find the top 5 years with the highest average content release in India.
 - Analyze and return the years with the highest average Netflix releases in India.
+  
+<img width="327" alt="10" src="https://github.com/user-attachments/assets/98028666-6f5b-4840-b95f-7480a84f9e19" />
 
 ### 12. List all Movies that are Documentaries.
 - Query to identify movies categorized as documentaries.
+  
+<img width="390" alt="11" src="https://github.com/user-attachments/assets/397e1a0b-0178-4f3c-9774-58cc355d0a7e" />
 
 ---
 
 ## Data Completeness & Actor Insights
 ### 13. Find all content without a director.
 - Identify records missing a director’s name in the dataset.
+  
+<img width="334" alt="12" src="https://github.com/user-attachments/assets/cff03684-d783-4a7b-958b-ef83c414c035" />
 
 ### 14. Count how many movies actor ‘Salman Khan’ appeared in over the last 10 years.
 - Retrieve the total number of movies featuring Salman Khan in the last decade.
+  
+<img width="573" alt="13" src="https://github.com/user-attachments/assets/c385715f-f463-4c00-ad6e-fbc0d641eea2" />
 
 ### 15. Find the top 10 actors who have appeared in the highest number of movies produced in India.
 - Determine the most frequent collaborators in Indian Netflix content.
+
+<img width="295" alt="14" src="https://github.com/user-attachments/assets/243fc2c9-e8ef-4323-9679-9dbbc2773ee6" />
 
 ---
 
 ## Content Categorization
 ### 16. Categorize content based on keywords (‘kill’ and ‘violence’).
 - Label content containing the keywords as “Bad” and all others as “Good.” Count how many items fall into each category.
+  
+<img width="367" alt="15" src="https://github.com/user-attachments/assets/7f747392-2363-47a6-95c7-3759c5f9f09a" />
 
 ---
 
@@ -207,9 +241,9 @@ Compare the distribution of Movies and TV Shows in the dataset.
 
 ---
 
-## Additional Consideration
-- Further data collection required as there are almost 2600 movies and tv shows missing director information which may hinder the accuracy of our analysis.
-- Data is only upto 2021 and the analysis may not correspond to current trends. 
+## Additional Considerations
+- Further data collection is required, as nearly 2,600 movies and TV shows are missing director information, which may hinder the accuracy of our analysis.
+- The data is only available up to 2021, so the analysis may not reflect current trends.
 
 
 
