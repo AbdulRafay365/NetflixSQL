@@ -47,7 +47,7 @@ Kaggle Link: https://www.kaggle.com/datasets/shivamb/netflix-shows?resource=down
 ---
 ## Technology Stack  
 
-- **Database:** PostgreSQL  
+- **Database:** PostgreSQL, Microsoft Excel  
 - **Query Tool:** pgAdmin  
 - **Version Control:** Git & GitHub  
 - **Data Handling:** SQL Queries  
